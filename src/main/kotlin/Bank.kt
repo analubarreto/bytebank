@@ -7,12 +7,18 @@ class Bank(private var accounts: List<Account>) {
     val account = accounts.firstOrNull { it.holder == name }
       ?: throw Exception("Conta não encontrada")
 
-    println("Digite sua senha: ")
-    val password = readln()
-
-    if (account.password != password) {
+    if (!account.inputPassword()) {
       throw Exception("Senha incorreta")
     }
+
+    return account
+  }
+
+  fun selectAccount(): Account {
+    val number = readlnOrNull()?.toInt()
+
+    val account = accounts.firstOrNull { it.number == number }
+      ?: throw Exception("Conta não encontrada")
 
     return account
   }
