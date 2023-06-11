@@ -16,15 +16,14 @@ fun main() {
 
   val alex = Employee("Alex", 14, 1000, "111.111.111-11")
   println(alex.toString())
-  println(alex.bonification())
+  println(alex.bonus)
 
   val fran = Manager("Fran", 15, 2000, "222.222.222-22", "1234")
   println(fran.toString())
-  println(fran.bonification())
+  println(fran.bonus)
   fran.authenticate()
 
   val gui = Director("Gui", 16, 3000, "333.333.333-33", 200.0)
   println(gui.toString())
-  println(gui.bonification())
-  println(gui.plr())
+  println(gui.bonus)
 }

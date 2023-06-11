@@ -5,13 +5,9 @@ class Director(
   override val cpf: String,
   private val plr: Double
 ): Employee(name, age, salary, cpf) {
-  override val bonus: Double get() = salary * 0.3
+  override val bonus: Double get() = super.bonus + salary + plr
 
   override fun toString(): String {
     return "Director(name='$name', age=$age, cpf=$cpf, salary=$salary)"
-  }
-
-  fun plr(): Double {
-    return salary + plr
   }
 }
