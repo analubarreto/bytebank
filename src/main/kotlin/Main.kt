@@ -1,29 +1,18 @@
 fun main() {
   val accounts = listOf(
-    Account("Alex", 1000, "1234"),
-    Account("Fran", 1001, "5678"),
+    CheckingAccount("Alex", 1000, "1234"),
+    SavingsAccount("Fran", 1001, "5678"),
     Account("Gui", 1002, "9876"),
     Account("Maria", 1003, "5432")
   )
   val byteBank = Bank(accounts)
 
-//  println("Bem vindos ao Bytebank")
-//
-//  byteBank.login().let { account ->
-//    println("Bem vindo ${account.holder}")
-//    selectOption(account, byteBank)
-//  }
+  val employees = listOf(
+    Manager("Alex", 19, 1000, "111.111.111-11", "1234"),
+    Director("Fran", 20, 1001, "222.222.222-22", 200.0),
+    Analyst("Gui", 21, 1002, "333.333.333-33"),
+    Analyst("Maria", 22, 1003, "444.444.444-44")
+  )
 
-  val alex = Employee("Alex", 14, 1000, "111.111.111-11")
-  println(alex.toString())
-  println(alex.bonus)
 
-  val fran = Manager("Fran", 15, 2000, "222.222.222-22", "1234")
-  println(fran.toString())
-  println(fran.bonus)
-  fran.authenticate()
-
-  val gui = Director("Gui", 16, 3000, "333.333.333-33", 200.0)
-  println(gui.toString())
-  println(gui.bonus)
 }

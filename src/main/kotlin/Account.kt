@@ -1,4 +1,4 @@
-class Account(
+open class Account(
   internal val holder: String,
   internal val number: Int,
   private val password: String
@@ -9,7 +9,7 @@ class Account(
     balance += value
   }
 
-  fun withdraw(value: Double) {
+  open fun withdraw(value: Double) {
     if (balance >= value) {
       balance -= value
     }
