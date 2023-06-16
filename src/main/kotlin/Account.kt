@@ -1,4 +1,4 @@
-open class Account(
+abstract class Account(
   internal val holder: String,
   internal val number: Int,
   private val password: String

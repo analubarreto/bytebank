@@ -2,8 +2,8 @@ fun main() {
   val accounts = listOf(
     CheckingAccount("Alex", 1000, "1234"),
     SavingsAccount("Fran", 1001, "5678"),
-    Account("Gui", 1002, "9876"),
-    Account("Maria", 1003, "5432")
+    CheckingAccount("Gui", 1002, "9876"),
+    SavingsAccount("Maria", 1003, "5432")
   )
   val byteBank = Bank(accounts)
 
@@ -13,6 +13,4 @@ fun main() {
     Analyst("Gui", 21, 1002, "333.333.333-33"),
     Analyst("Maria", 22, 1003, "444.444.444-44")
   )
-
-
 }

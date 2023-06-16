@@ -1,10 +1,10 @@
-open class Employee(
-  open val name: String,
-  open val age: Int,
-  open val salary: Int,
-  open val cpf: String,
+abstract class Employee(
+  private val name: String,
+  private val age: Int,
+  private val salary: Int,
+  private val cpf: String,
 ) {
-  open val bonus: Double get() = salary * 0.1
+  abstract val bonus: Double
   override fun toString(): String {
     return "Employee(name='$name', age=$age, cpf=$cpf, salary=$salary)"
   }
