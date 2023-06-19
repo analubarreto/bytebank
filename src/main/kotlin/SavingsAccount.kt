@@ -7,7 +7,6 @@ class SavingsAccount(
   number,
   password) {
   override fun withdraw(value: Double) {
-    val valueWithTax = value + 0.1
-    super.withdraw(valueWithTax)
+    withdraw(value)
   }
 }

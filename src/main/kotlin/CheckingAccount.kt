@@ -5,4 +5,11 @@ class CheckingAccount(
 ) : Account(
   holder,
   number,
-  password)
+  password) {
+  override fun withdraw(value: Double) {
+    val withTax = value + 0.1
+    if (balance >= withTax) {
+      balance -= withTax
+    }
+  }
+}

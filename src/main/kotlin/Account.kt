@@ -3,17 +3,13 @@ abstract class Account(
   internal val number: Int,
   private val password: String
 ) {
-  internal var balance = 0.0
+  var balance = 0.0
+    protected set
 
   fun deposit(value: Double) {
     balance += value
   }
-
-  open fun withdraw(value: Double) {
-    if (balance >= value) {
-      balance -= value
-    }
-  }
+  abstract fun withdraw(value: Double)
 
   fun transfer(value: Double, destiny: Account): Boolean {
     println("Transferindo $value da conta de $holder para a conta de ${destiny.holder}.")

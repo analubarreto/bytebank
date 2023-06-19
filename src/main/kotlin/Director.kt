@@ -3,8 +3,9 @@ class Director(
   private val age: Int,
   private val salary: Int,
   private val cpf: String,
-  private val plr: Double
-): Employee(name, age, salary, cpf) {
+  private val plr: Double,
+  private val password: String,
+): Admin(name, age, salary, cpf, password) {
   override val bonus: Double
     get() = (salary * 0.1) + salary + plr
 
