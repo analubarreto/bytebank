@@ -4,7 +4,7 @@ class Manager(
   private val salary: Int,
   private val cpf: String,
   private val password: String,
-): Admin(name, age, salary, cpf, password) {
+): Admin(name, age, salary, cpf, password), AuthUser {
   override val bonus: Double
     get() = salary * 0.2
   override fun toString(): String {

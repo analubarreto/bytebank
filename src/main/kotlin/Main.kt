@@ -9,8 +9,10 @@ fun main() {
 
   val employees = listOf(
     Manager("Alex", 19, 1000, "111.111.111-11", "1234"),
-    Director("Fran", 20, 1001, "222.222.222-22", 200.0),
+    Director("Fran", 20, 1001, "222.222.222-22", 200.0, password = "5678"),
     Analyst("Gui", 21, 1002, "333.333.333-33"),
     Analyst("Maria", 22, 1003, "444.444.444-44")
   )
+
+  val client = Client("Alex", "111.111.111-11", "1234")
 }

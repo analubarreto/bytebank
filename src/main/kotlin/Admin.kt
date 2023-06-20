@@ -10,9 +10,7 @@ abstract class Admin(
     return "Employee(name='$name', age=$age, cpf=$cpf, salary=$salary)"
   }
 
-  fun authenticate(password: String): Boolean {
-    println("Digite a senha: ")
-    val password = readln()
+  fun login(password: String) : Boolean {
     return this.password == password
   }
 }

@@ -1,6 +1,6 @@
 class InternalSystem {
-  fun login(manager: Admin, password: String) {
-    if (manager.authenticate(password)) {
+  fun login(manager: Admin, password: Int) {
+    if (manager.login(password)) {
       println("Welcome to Bytebank")
     } else {
       println("Wrong password")
