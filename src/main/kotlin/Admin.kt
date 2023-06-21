@@ -10,7 +10,7 @@ abstract class Admin(
     return "Employee(name='$name', age=$age, cpf=$cpf, salary=$salary)"
   }
 
-  fun login(password: String) : Boolean {
+  open fun login(password: String) : Boolean {
     return this.password == password
   }
 }
